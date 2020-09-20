@@ -18,6 +18,8 @@ describe('parse-repository-url', () => {
     user: 'user'
   })));
 
+  // NOTE: This is technically not a valid `git` URL, as it's an SSH URL where the slash, `/`, should be a colon, `:`. However, we have to mutate SSH URLs to HTTPS to make them parsable by JavaScript's built-in parser, which makes the original path appear valid.
+  // TODO: Handle SSH URLs so that invalid SSH URLs are rejected.
   [
     'git@gitlab.com/really-long-group/with-really-long-sub-group/and-a-really-long-project-name.git'
   ].forEach(url => it(url, () => {
