@@ -1,5 +1,9 @@
 # Contributing
 
+## Project Scope
+
+`parse-repository-url` is intended to accept any URL that can be used by `git` as a _remote_, and to parse that URL into its component parts; user, project, host/platform, etc.
+
 ## Feature Requests
 
 I'm always looking for suggestions to improve this project. If you have a suggestion for improving an existing feature, or would like to suggest a completely new feature, please file an issue with my [repository](https://github.com/hyper-expanse/parse-repository-url/issues).
